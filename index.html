@@ -3,10 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe App</title>
+    <title>Recipe App (Static)</title>
+    <link rel="stylesheet" href="/static/styles.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="app">
+      <header>
+        <h1>Recipe App (Static)</h1>
+      </header>
+
+      <main>
+        <div class="sidebar">
+          <div class="search-container">
+            <input id="searchInput" placeholder="Search recipes..." />
+          </div>
+
+          <div class="add-recipe" id="addForm">
+            <h2>Add Recipe</h2>
+            <input id="addTitle" placeholder="Title" />
+            <input id="addDesc" placeholder="Short description" />
+            <textarea id="addIngredients" placeholder="Ingredients (comma separated)"></textarea>
+            <textarea id="addSteps" placeholder="Steps (one per line)"></textarea>
+            <button id="addBtn">Add</button>
+          </div>
+
+          <div class="recipe-list">
+            <h2>Recipes</h2>
+            <div id="listContainer"></div>
+          </div>
+        </div>
+
+        <div class="content" id="detailContainer">
+          <div class="placeholder">Select a recipe to see details</div>
+        </div>
+      </main>
+
+    </div>
+
+    <script src="/static/app.js"></script>
   </body>
 </html>

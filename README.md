@@ -1,32 +1,26 @@
-# Recipe App Project
+# Recipe App Project — Static (Node-free)
 
-This workspace contains a minimal React recipe app (Vite) scaffolded with components for listing, viewing, adding, and searching recipes. The code was generated as a demonstration of using VS Code + GitHub Copilot to speed development.
+This workspace now contains a Node-free static recipe app implemented with plain JavaScript and CSS. The previous React/Vite scaffold was removed to avoid confusion.
 
-Getting started
- 1. Install dependencies:
+Quick start (no Node required)
+- Open `index.html` directly in your browser, or use the VS Code Live Server extension and open `index.html`.
+- Static app files:
+	- [index.html](index.html)
+	- [static/app.js](static/app.js)
+	- [static/styles.css](static/styles.css)
 
-```powershell
-npm install
-```
+Notes
+- Recipes are stored in `localStorage` when you add new ones so they persist between reloads in the same browser.
+- If you want a build/dev workflow later, you can reintroduce a React/Vite scaffold or use `npx create-vite@latest` and move these files into that project.
 
-2. Run the dev server:
-
-```powershell
-npm run dev
-```
-
-3. Open the app in your browser at `http://localhost:5173` (Vite default).
-
-Quick notes:
-- Files to inspect: [src/App.jsx](src/App.jsx), [src/components/RecipeList.jsx](src/components/RecipeList.jsx), [src/components/RecipeDetail.jsx](src/components/RecipeDetail.jsx), [src/components/AddRecipe.jsx](src/components/AddRecipe.jsx), [src/components/SearchBar.jsx](src/components/SearchBar.jsx), [src/data/sampleRecipes.js](src/data/sampleRecipes.js)
-- To create the repo locally and push to GitHub:
+To create a Git repository and push to GitHub:
 
 ```powershell
 git init
 git add .
-git commit -m "Initial recipe app scaffold"
+git commit -m "Static recipe app (no Node)"
 gh repo create <your-username>/recipe-app --public --source=. --remote=origin
 git push -u origin main
 ```
 
-If you prefer to scaffold using `npx` directly, you can instead run `npx create-vite@latest recipe-app --template react` then copy or adapt these files into that project.
+If you want me to remove any remaining files or initialize the git repo for you, tell me and I'll proceed.
